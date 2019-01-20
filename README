@@ -1,0 +1,12 @@
+This is a mpi implementation of the kmeans+pso cluster algorithm. In this implementation, 
+seperate kmeans or pso cluster algorithm can be applied to dataset cluster. 
+More important, pso cluster algorithm can to used to give better initilized clusters' center for 
+kmeans cluster algorithm, which helps kmeans to escape from local minimization.
+
+1. Using make to compile the program, I have writen the makefile, you just need to run make in the
+   current directory. (I have already compiled for you if you don't have make)
+2. Run "./main --help" to see the help information. If you think the help information is awesome,
+   "mpirun -n 7 --oversubscribe ./main"  will run the parallel k-means algorithm
+   "mpirun -n 7 --oversubscribe ./main --mode=pso" will run the parallel pso algorithm
+   "mpirun -n 7 --oversubscribe ./main --mode=hybrid" will run the paraller pso+kmeans algorithm
+3. Email me if have any problem xied15@mails.tsinghua.edu.cn
